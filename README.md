@@ -2,52 +2,60 @@
 
 Independent security research and vulnerability documentation by Vibhor Prasad.
 
-All findings documented here were discovered through authorized bug bounty programs. Testing was conducted within defined program scope, following responsible disclosure practices throughout.
+All findings were discovered through the BugV authorized bug bounty platform. Targets include omgnepal.com and cynicaltechnology.com. Testing was conducted within defined program scope following responsible disclosure practices throughout.
 
 ---
 
-## Research Summary
+## Research Overview
 
-| Platform | Target        | Findings | Status               |
-|----------|---------------|----------|----------------------|
-| BugV     | omgnepal.com  | 1        | Reported / Duplicate |
+Platform: BugV
+Targets: omgnepal.com, cynicaltechnology.com
+Total submissions: 10
+Severity range: Low to High
+Period: March 2026 to March 2026
+
+Submission breakdown:
+
+- 3 marked Duplicate — valid findings, independently discovered, another researcher submitted the same issue first
+- 5 marked Not Applicable — did not meet the program's exploitability threshold or fell outside defined scope
+- 2 marked Won't Fix — vendor acknowledged the finding and accepted the risk rather than remediating
+
+None of these outcomes indicate incorrect research. All 10 reports were written to standard with full reproduction steps and proof-of-concept documentation. The SUBMISSION_LOG.md file contains the full tracker. METHODOLOGY.md covers the research process in detail.
 
 ---
 
 ## Repository Structure
 
 ```
-bug-bounty-reports/
-├── reports/
-│   └── omgnepal/
-│       ├── README.md
-│       └── findings/
-│           └── VULN-001/
-│               ├── report.md
-│               └── poc/
-│                   └── README.md
-└── templates/
-    ├── vuln-report-template.md
-    └── poc-template.md
+SUBMISSION_LOG.md       Master tracker of all 10 submissions with type, severity, CVSS, and status
+METHODOLOGY.md          Research approach, tools used, scope compliance, and documentation standard
+DISCLOSURE_POLICY.md    Responsible disclosure policy and explanation of each status outcome
+reports/                One folder per target, one subfolder per finding
+templates/              Reusable templates for future report and PoC documentation
 ```
 
 ---
 
-## Methodology
+## Skill Areas Demonstrated
 
-Recon is done through subdomain enumeration, endpoint discovery, and JavaScript analysis. Vulnerabilities are tested manually using Burp Suite, cross-referenced against OWASP Top 10 and relevant CWEs. Every finding is documented with reproduction steps and a minimal, non-destructive proof of concept before submission.
+Web application security testing covering vulnerability identification, manual exploitation, structured reporting, and responsible disclosure. Findings span multiple vulnerability classes across the low to high severity range. Each submission includes raw HTTP request and response, exact payload, reproduction steps, impact analysis, and a specific remediation recommendation.
 
-Disclosure follows the platform's process. Findings are published here after triage is complete or duplicate status is confirmed.
+Tools used across this research: Burp Suite, Nmap, browser DevTools, manual JavaScript analysis, curl.
 
 ---
 
 ## Background
 
-- B.Tech in Cyber Security, LNCT Group of Colleges, Bhopal (Expected June 2027)
-- Certified Network Security Practitioner (CNSP) — 85%
-- PortSwigger Web Security Academy — completed labs in XSS, SQL Injection, Access Control, Authentication, and API Security
-- Tools: Burp Suite, Nmap, Wireshark, Hydra, Aircrack-ng
+B.Tech in Cyber Security, LNCT Group of Colleges, Bhopal, India. Expected graduation June 2027.
+Certified Network Security Practitioner (CNSP) — 85%.
+PortSwigger Web Security Academy — completed labs in XSS, SQL Injection, Access Control, Authentication, and API Security.
 
 GitHub: https://github.com/stack-guardian
 LinkedIn: https://www.linkedin.com/in/vibhor-prasad-3ba373381/
 Contact: vibhorprasad14@gmail.com
+
+---
+
+## Legal
+
+All research was conducted through authorized bug bounty programs only. No unauthorized access was performed. See DISCLOSURE_POLICY.md for the full responsible disclosure policy.
